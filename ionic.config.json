@@ -1,0 +1,7 @@
+{
+  "name": "react ionic itbf",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
