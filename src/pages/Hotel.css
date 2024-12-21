@@ -1,0 +1,62 @@
+ion-item h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+ion-toast.success-toast {
+    --background: #d1e7dd;
+    --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+    --color: #0f5132;
+    --border-color: #badbcc;
+}
+
+ion-toast.error-toast {
+    --background: #f8d7da;
+    --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+    --color: #842029;
+    --border-color: #f5c2c7;
+}
+
+/* Botones */
+.action-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.action-button {
+    --padding-start: 10px;
+    --padding-end: 10px;
+}
+
+@media (max-width: 768px) {
+    .action-button {
+        --padding-start: 6px;
+        --padding-end: 6px;
+        --padding-top: 4px;
+        --padding-bottom: 4px;
+    }
+
+    .action-button ion-icon {
+        font-size: 18px;
+    }
+}
+
+
+
+
+.custom-popover {
+    --backdrop-opacity: 0 !important;
+    --background: red;
+    --color: var(--ion-color-medium-contrast);
+    --border-radius: 4px;
+}
+
+.popover-content {
+    padding: 8px 12px;
+}
+
+/* Prevenir cambios en el fondo */
+ion-popover::part(backdrop) {
+    background: transparent !important;
+}

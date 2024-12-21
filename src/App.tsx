@@ -2,7 +2,11 @@ import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/r
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
-import Page from './pages/Page';
+import Hotel from './pages/Hotel';
+import About from "./pages/About";
+import HotelView from "./pages/HotelView";
+import HotelCreateOrUpdate from "./pages/HotelCreateOrUpdate";
+import HotelRoom from "./pages/HotelRoom";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -38,21 +42,44 @@ setupIonicReact();
 
 const App: React.FC = () => {
   return (
-    <IonApp>
-      <IonReactRouter>
-        <IonSplitPane contentId="main">
-          <Menu />
-          <IonRouterOutlet id="main">
-            <Route path="/" exact={true}>
-              <Redirect to="/folder/Inbox" />
-            </Route>
-            <Route path="/folder/:name" exact={true}>
-              <Page />
-            </Route>
-          </IonRouterOutlet>
-        </IonSplitPane>
-      </IonReactRouter>
-    </IonApp>
+      <IonApp>
+        <IonReactRouter>
+          <IonSplitPane contentId="main">
+            <Menu />
+            <IonRouterOutlet id="main">
+              <Route path="/" exact={true}>
+                <Redirect to="/hotels" />
+              </Route>
+              <Route path="/hotels/:name" exact={true}>
+                <Hotel />
+              </Route>
+              <Route path="/hotels/view/:id" exact={true}>
+                <HotelView />
+              </Route>
+              <Route path="/hotels/new" exact={true}>
+                <HotelCreateOrUpdate />
+              </Route>
+              <Route path="/hotels/edit/:id" exact={true}>
+                <HotelCreateOrUpdate />
+              </Route>
+              <Route path="/hotels" exact={true}>
+                <Hotel />
+              </Route>
+
+              <Route path="/hotels/:hotelId/room/new" exact={true}>
+                <HotelRoom />
+              </Route>
+              <Route path="/hotels/:hotelId/room/edit/:roomId" exact={true}>
+                <HotelRoom />
+              </Route>
+
+              <Route path="/about" exact={true}>
+                <About />
+              </Route>
+            </IonRouterOutlet>
+          </IonSplitPane>
+        </IonReactRouter>
+      </IonApp>
   );
 };
 

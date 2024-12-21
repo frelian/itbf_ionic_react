@@ -1,2 +1,43 @@
-/* For information on how to create your own theme, please see:
-http://ionicframework.com/docs/theming/ */
+/* variables.css o Page.css */
+:root {
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+    --text-color-primary: #282828;
+    --heading-color: #282828;
+    --list-header-color: #282828;
+}
+
+.dark-theme {
+    --ion-background-color: #121212;
+    --ion-text-color: #ffffff;
+    --text-color-primary: #ffffff;
+    --heading-color: #ffffff;
+    --list-header-color: #ffffff;
+}
+
+.dark-theme .ion-header,
+.dark-theme .ion-toolbar {
+    background: #1f1f1f;
+}
+
+/* Estilo específico para IonListHeader */
+ion-card-title {
+    --color: var(--list-header-color) !important;
+}
+
+p {
+    color: var(--text-color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+h3 {
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.bolder {
+    font-weight: bolder;
+}
