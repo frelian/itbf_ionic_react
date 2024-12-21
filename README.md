@@ -20,5 +20,7 @@ Para correr el proyecto
 ## Info
 * Uso de Ionic con React
 * Uso de Readux
+* DarkMode
+* Traducciones (Inglés/Español)
 * Listado de hoteles con su CRUD
 * Editar y eliminar habitaciones
